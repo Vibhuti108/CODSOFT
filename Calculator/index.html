@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scientific 3D Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <input type="text" id="display" readonly />
+      <div class="clock" id="clock"></div>
+    </div>
+    <div class="history" id="history"></div>
+    <div class="buttons">
+      <!-- Layout of the keys -->
+      <button class="btn" onclick="playSound(); appendValue('7')">7</button>
+      <button class="btn" onclick="playSound(); appendValue('8')">8</button>
+      <button class="btn" onclick="playSound(); appendValue('9')">9</button>
+      <button class="btn operator" onclick="playSound(); appendValue('/')">÷</button>
+      <button class="btn" onclick="playSound(); appendValue('sin(')">sin</button>
+
+      <button class="btn" onclick="playSound(); appendValue('4')">4</button>
+      <button class="btn" onclick="playSound(); appendValue('5')">5</button>
+      <button class="btn" onclick="playSound(); appendValue('6')">6</button>
+      <button class="btn operator" onclick="playSound(); appendValue('*')">×</button>
+      <button class="btn" onclick="playSound(); appendValue('cos(')">cos</button>
+
+      <button class="btn" onclick="playSound(); appendValue('1')">1</button>
+      <button class="btn" onclick="playSound(); appendValue('2')">2</button>
+      <button class="btn" onclick="playSound(); appendValue('3')">3</button>
+      <button class="btn operator" onclick="playSound(); appendValue('-')">−</button>
+      <button class="btn" onclick="playSound(); appendValue('tan(')">tan</button>
+
+      <button class="btn" onclick="playSound(); appendValue('0')">0</button>
+      <button class="btn" onclick="playSound(); appendValue('.')">.</button>
+      <button class="btn" onclick="playSound(); appendValue('π')">π</button>
+      <button class="btn operator" onclick="playSound(); appendValue('+')">+</button>
+      <button class="btn" onclick="playSound(); appendValue('sqrt(')">√</button>
+
+      <button class="btn" onclick="playSound(); appendValue('(')">(</button>
+      <button class="btn" onclick="playSound(); appendValue(')')">)</button>
+      <button class="btn" onclick="playSound(); appendValue('[')">[</button>
+      <button class="btn" onclick="playSound(); appendValue(']')">]</button>
+      <button class="btn" onclick="playSound(); appendValue('{')">{</button>
+
+      <button class="btn" onclick="playSound(); appendValue('}')">}</button>
+      <button class="btn memory" onclick="playSound(); memoryAdd()">M+</button>
+      <button class="btn memory" onclick="playSound(); memoryRecall()">MR</button>
+      <button class="btn" onclick="playSound(); clearDisplay()">C</button>
+      <button class="btn" onclick="playSound(); deleteLast()">DEL</button>
+
+      <button class="btn equals" onclick="playSound(); calculate()">=</button>
+      <button class="btn" onclick="playSound(); deleteHistory()">CLR HIST</button>
+    </div>
+  </div>
+
+  <audio id="clickSound" src="beep-07a.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
